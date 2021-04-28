@@ -13,6 +13,7 @@ for (var i = 0; i < listaCognomi.length; i++){
     var nuovaLista = listaCognomi[i];
     console.log(nuovaLista);
     var content = document.getElementById('listaCognomi').innerHTML;
+    document.getElementById('titolo').innerHTML = "Benvenuto " + cognomeUtente + ' sei stato aggiunto correttamente alla lista'
     document.getElementById('listaCognomi').innerHTML = content + '<li>' + nuovaLista + '</li>';
 }
 
