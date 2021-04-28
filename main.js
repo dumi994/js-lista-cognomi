@@ -7,8 +7,12 @@ console.log(cognomeUtente);
 
 // 2. inseriscilo in un array con altri cognomi: ‘Bianchi’, ‘Neri’, ‘Rossi’, ‘Verdi’, ‘Gialli’
 listaCognomi.push(cognomeUtente)
-console.log(listaCognomi.sort());
 // 3. stampa la lista ordinata alfabeticamente
-document.getElementById('titolo').innerHTML = 'Benvenuto ' + cognomeUtente + ', sei stato aggiunto alla lista invitati';
-
+listaCognomi.sort();
+for (var i = 0; i < listaCognomi.length; i++){
+    var nuovaLista = listaCognomi[i];
+    console.log(nuovaLista);
+    var content = document.getElementById('listaCognomi').innerHTML;
+    document.getElementById('listaCognomi').innerHTML = content + '<li>' + nuovaLista + '</li>';
+}
 // 4. scrivi anche la posizione "umana" (partendo da 1) della lista in cui il nuovo utente si trova
